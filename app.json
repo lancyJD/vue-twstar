@@ -1,0 +1,52 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/play_class/play_class",
+    "pages/mine/mine",
+    "pages/play_shop/play_shop",
+    "pages/class_detail/class_detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffd103",
+    "navigationBarTitleText": "HelloLemon檬运动",
+    "navigationBarTextStyle":"black"
+  },
+   "tabBar": {
+    "color": "#9B9DB1",
+    "selectedColor": "#ffd103",
+    "borderStyle": "black",
+    "backgroundColor": "#fffffe",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "iconPath": "images/msnui-hot.png",
+      "selectedIconPath": "images/msnui-hot-active.png",
+      "text": "热门"
+    }, {
+      "pagePath": "pages/play_class/play_class",
+      "iconPath": "images/easyiconnet.png",
+      "selectedIconPath": "images/easyiconnet-active.png",
+      "text": "檬课"
+    },
+     {
+      "pagePath": "pages/play_shop/play_shop",
+      "iconPath": "images/shangdian.png",
+      "selectedIconPath": "images/shangdian-active.png",
+      "text": "檬店"
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "iconPath": "images/me.png",
+      "selectedIconPath": "images/me-active.png",
+      "text": "我的"
+    }]
+  },
+  "networkTimeout":{
+      "request": 10000,
+      "connectSocket": 10000,
+      "uploadFile": 10000,
+      "downloadFile": 10000
+   }
+}

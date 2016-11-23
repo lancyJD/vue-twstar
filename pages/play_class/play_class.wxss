@@ -1,0 +1,105 @@
+.container{
+    
+}
+.tab-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28rpx;
+    width: 100%;
+    text-align: center;
+    height: 60rpx;
+    line-height:60rpx;
+    background: #fff;
+    border-bottom: 2px solid #f5f5f9;
+    
+}
+.tabbar{
+    width:25%;
+    margin-left: 12rpx
+}
+.navigator-click{
+   
+}
+.bar-text{
+    text-align: center;
+    width: 85%;
+    height: 50rpx;
+    margin-top: 8rpx;
+    line-height: 45rpx;
+    padding-left: 14rpx;
+ 
+}
+
+.swiper-tab{  
+    width: 100%;  
+    border-bottom: 2rpx solid #777777;  
+    /*text-align: center;  */
+    line-height: 80rpx;
+}  
+.swiper-tab-list{  font-size: 30rpx;  
+    display: inline-block;  
+    width: 33.33%;  
+    color: #fff;  
+}  
+.on{ 
+     background-color: #ffd103;
+     border-radius: 20px;
+}  
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; background-color: #fff; }  
+.swiper-box{  
+    text-align: center;  
+}  
+.swiper-item{
+    display: flex;
+    flex-direction: row;
+}
+.date-time{
+    float: left;
+    height: 100%;
+    line-height: 100%;
+    width: 25%;
+    font-size: 32rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-right: 2px solid #f5f5f9;
+}
+.date-time-box{
+    display: flex;
+    flex-direction: column;
+    height: 200rpx;
+    line-height: 80rpx;
+    width: 100%;
+    font-family:"微软雅黑";
+    /*border-bottom: 2px solid #f5f5f5;*/
+}
+.date-time-box text{
+    height: 50rpx;
+}
+.week-on {
+    background-color: #f5f5f5;
+}
+.swiper-box-class{
+    width: 100%;
+}
+.swiper-box-class view{
+    text-align: right;
+    padding-right: 24rpx;
+    font-size: 26rpx;
+}
+.addess-location{
+    background-color: #fff6cf;
+    height: 38rpx;
+    line-height: 38rpx;
+}
+.class-list {
+
+}
+.store-name{
+    float: left;
+    padding-left: 22rpx;
+}

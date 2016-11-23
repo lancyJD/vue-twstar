@@ -1,0 +1,60 @@
+<view class="container">
+    <scroll-view scroll-y='true'  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" >
+        <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" bindchange='changeIndex' interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{data.hot_banner_list}}" wx:key="previewUrl">
+                <swiper-item>
+                    <navigator url="../../{{item.previewUrl}}" hover-class="navigator-hover">
+                        <image src="{{item.imageUrl}}" class="slide-image" width="100%" height="100%"/>
+                    </navigator>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view id='shiping'  class='index-more'>
+            <view class='jl-video'>教练视频</view>
+            <navigator class='more' url="../../pages/class_detail/class_detail" hover-class="navigator-hover">更多>></navigator>
+        </view>
+        <!--视频推荐-->
+        <view class='video-index'>
+            <block wx:for="{{data.mostpop_course_list}}"  wx:key="link">
+                <navigator  url="{{item.link}}" hover-class="navigator-hover">
+                    <view class="section">
+                        <view class='image-text' style="background-image:url({{item.headImg}})" > 
+                            <view class="btn-area">
+                                <text >{{item.title}}</text>
+                            </view>
+                        </view>
+                        <!--<video id="myVideo" class='lemo-video' src="{{item.videoUrl}}" binderror="videoErrorCallback" enable-danmu danmu-btn controls></video>-->
+                    </view>
+                </navigator>
+            </block>
+        </view>
+        <view  class='index-more'>
+            <view class='jl-video'>热门文章</view>
+            <navigator class='more' url="../../pages/class_detail/class_detail" hover-class="navigator-hover">更多>></navigator>
+        </view>
+
+        <block wx:for="{{data.hotart_list}}"  wx:key="link">
+            <navigator class='index-article-nav' url="{{item.link}}" hover-class="navigator-hover">
+                <view class='index-article'>
+                    <image src='{{item.previewUrl}}' class='article-image'/>
+                    <view class='article-title-desc'>
+                        <text class='article-title'>{{item.title}}</text>
+                        <text class='article-desc'>{{item.text}}</text>
+                    </view>
+                </view>
+            </navigator>
+        </block>
+         <block wx:for="{{data.hotart_list}}"  wx:key="link">
+            <navigator class='index-article-nav' url="{{item.link}}" hover-class="navigator-hover">
+                <view class='index-article'>
+                    <image src='{{item.previewUrl}}' class='article-image'/>
+                    <view class='article-title-desc'>
+                        <text class='article-title'>{{item.title}}</text>
+                        <text class='article-desc'>{{item.text}}</text>
+                    </view>
+                </view>
+            </navigator>
+        </block>
+    </scroll-view>
+</view>

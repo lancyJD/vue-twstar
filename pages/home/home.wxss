@@ -1,0 +1,137 @@
+.container{
+    
+}
+.slide-image{
+  width: 100%;
+  height: 320rpx;
+}
+.textindex{
+    position: absolute;
+    top :40rpx;
+    color: red;
+}
+
+page swiper{
+    width:100%;
+}
+
+.index-more{
+    width: 100%;
+    height: 80rpx;
+    float: left;
+    margin-top: 24rpx;
+    background: #fff;
+    border-bottom:1px solid #dadada;
+    flex-direction: row;
+    display: flex;
+}
+.jl-video{
+    font-size: 32rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-left: 24rpx;
+    width: 85%;
+   
+}
+.more{
+    font-size: 24rpx;
+    float: right;
+    /*padding-right: 24rpx;*/
+    /*padding-bottom: 20rpx;*/
+    height: 80rpx;
+    line-height: 100rpx;
+    color:#9a9a9a;
+    width:10%;
+}
+.video-index{
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFF;
+    display: flex;
+}
+.image-text{
+    width: 100%;
+    height: 300rpx;
+    line-height: 300rpx;
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+    background-size: 95%;
+}
+.image{
+    width: 100%;
+    height: 290rpx;
+    margin-top: 20rpx;
+    line-height: 300px;
+   
+}
+
+.section{
+    width: 100%;
+    height: 290rpx;
+    font-size: 28rpx;
+    background: #fff;
+    margin-top: 20rpx;
+}
+.btn-area{
+    text-align: center;
+    line-height: 250rpx;
+    height: 300rpx;
+    width: 94%;
+    padding-top: 1rpx;
+    color:#fff;
+    font-size: 18px;
+    margin-left: 12px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+.lemo-video{
+    display: none;
+}
+.index-article-nav{
+    height: 150rpx;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12rpx;
+    border-bottom: 1px solid #e2e2e2;
+    background: #fff;
+}
+.index-article{
+    height: 150rpx;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    padding-left: 30rpx;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2e2e2;
+    background: #fff;
+}
+.article-image{
+    width: 30%;
+    height: 130rpx;
+    line-height: 130rpx;
+}
+.article-title-desc{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20rpx;
+    font-family:"微软雅黑";
+}
+.article-title{
+     font-size: 28rpx;
+     height: 50rpx;
+     line-height: 80rpx;
+}
+.article-desc{
+    padding-top: 30rpx;
+     font-size: 25rpx;
+     height: 100rpx;
+     line-height: 30rpx;
+     color: #9a9a9a;
+}

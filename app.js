@@ -1,6 +1,23 @@
 //app.js
+var wilddog = require('wilddog-weapp')
 App({
   onLaunch: function () {
+     var config = {
+      syncURL: 'https://lusa.wilddogio.com',
+      authDomain: 'lusa.wilddog.com'
+    }
+     wilddog.initializeApp(config)
+   //或者使用Promise
+    wilddog.auth().signInWeapp().then(function(user){
+     
+    }).catch(function(err){
+      
+    })
+
+    this.todoRef= wilddog.sync().ref('/data');
+    // ref.on('value', function(data){
+    //  console.log(data.val());
+    // })
     //调用API从本地缓存中获取数据
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())

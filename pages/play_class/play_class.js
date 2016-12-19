@@ -2,7 +2,6 @@
 //获取应用实例  
 var app = getApp()  
 var storeJson = require('./moke_store')
-console.log(storeJson)
 Page( {  
   data: {   
     winWidth: 0,  

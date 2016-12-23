@@ -6,7 +6,7 @@
         <view data-current="2" bindtap="swichNav" class="tabbar {{currentTab==2 ? 'on' : ''}}"><view data-current="2" bindtap="swichNav" class='bar-text'>檬营</view></view>
         <view data-current="3" bindtap="swichNav" class="tabbar {{currentTab==3 ? 'on' : ''}}"><view data-current="3" bindtap="swichNav" class='bar-text'>自助健身</view></view>
     </view>
-    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight}}px" bindchange="bindChange">  
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight-40}}px" bindchange="bindChange">  
         
         <swiper-item class='swiper-item'>
             <view class='date-time'>

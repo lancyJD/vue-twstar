@@ -84,6 +84,9 @@ ret: 0
         });  
       }  
     });
+
+
+    
   },
   changeIndicatorDots: function(e) {
     this.setData({

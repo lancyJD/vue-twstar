@@ -6,8 +6,11 @@
 }
 .userinfo {
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
+  background-color: #ffd103;
+  height: 300rpx;
 }
 
 .userinfo-avatar {
@@ -54,3 +57,13 @@ picker{
 .result{
   width: 100%;
 }
+.menu{
+  flex-direction: row;
+ 
+}
+ view {
+    flex-direction: row;
+    float: left;
+    text-align: center;
+      align-items: center;
+  }

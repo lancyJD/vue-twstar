@@ -1,5 +1,5 @@
 <view class="container">
-    <scroll-view scroll-y='true'  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" >
+    <scroll-view scroll-y='true' style="height:{{winHeight}}px" >
         <swiper indicator-dots="{{indicatorDots}}"
         autoplay="{{autoplay}}" bindchange='changeIndex' interval="{{interval}}" duration="{{duration}}">
             <block wx:for="{{data.hot_banner_list}}" wx:key="previewUrl">

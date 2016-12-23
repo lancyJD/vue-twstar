@@ -7,11 +7,6 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
-
-  <!--<view class="btn-area">
-    <navigator class='navigator' url="/pages/home/index" redirect hover-class="navigator-hover">热门</navigator>
-    <navigator class='navigator' url="redirect?title=redirect" redirect hover-class="other-navigator-hover">檬课</navigator>
-    <navigator class='navigator' url="redirect?title=redirect" redirect hover-class="other-navigator-hover">檬店</navigator>
-    <navigator class='navigator' url="redirect?title=redirect" redirect hover-class="other-navigator-hover">我的</navigator>
-  </view>-->
+  <view  bindtap="scanoQR">扫码支付</view>
+  <view result='result'><text>{{result}}</text></view>
 </view>

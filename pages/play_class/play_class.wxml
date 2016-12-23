@@ -6,44 +6,56 @@
         <view data-current="2" bindtap="swichNav" class="tabbar {{currentTab==2 ? 'on' : ''}}"><view data-current="2" bindtap="swichNav" class='bar-text'>檬营</view></view>
         <view data-current="3" bindtap="swichNav" class="tabbar {{currentTab==3 ? 'on' : ''}}"><view data-current="3" bindtap="swichNav" class='bar-text'>自助健身</view></view>
     </view>
-    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+    <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight}}px" bindchange="bindChange">  
         
         <swiper-item class='swiper-item'>
             <view class='date-time'>
-                <block wx:for="{{dateTime}}"  wx:key="week">  
+                <block wx:for="{{storeJson.data.day_week_list}}"  wx:key="week">  
                     <view bindtap="switchWeek" data-index='{{index}}' class="date-time-box {{item.isSelected ? 'week-on' : ''}}">
-                        <text >{{item.dateTime}}</text>
+                        <text >{{item.date}}</text>
                         <text >{{item.week}}</text>
                     </view>  
                 </block>
             </view>
-            <swiper current="{{currentSubTab}}" class="swiper-box-class" duration="300" style="height:100%;width:100%;" >  
+            <swiper current="{{currentSubTab}}"  class="swiper-box-class" duration="300" style="height:{{winHeight}}px" >  
                 <swiper-item>
-                    <scroll-view scroll-y='true'  class='class-list'>
-                           
-                        <block wx:for="{{storeJson.data.day_week_list}}"  wx:key="latitude">
-                            <view  class='addess-location'>
-                                <text class='store-name'>{{item.store_list.store_name}}</text>
-                                <text class='store-distance'>563m</text>
-                            </view>
-                        </block>
+                    <scroll-view scroll-y='true'  style="height:{{winHeight}}px" class='class-list'>
+                        <view wx:if="{{witchSelect.store_list.length > 0}}"> 
+                            <block wx:for="{{witchSelect.store_list}}"  wx:key="latitude">
+                                <view bindtap='openTheMap' class='addess-location'>
+                                    <text  class='store-name'>{{item.store_name}}</text>
+                                    <text class='store-distance'>563m</text>
+                                </view>
+                                <block wx:for="{{item.team_course_list}}"  wx:key="latitude" wx:for-item='storeItem'>
+                                    <view class='store-list'>
+                                        <image class='coachHeadimg' src="{{storeItem.coachHeadImage}}" />
+                                        <view class='course-title'>{{storeItem.title}}</view>      
+                                        <view class='course-title'><text class='vip-price'>¥{{storeItem.price}}</text> <text>会员价¥{{storeItem.vipPrice}} </text></view>
+                                        <view class='course-title'><text>{{storeItem.time}}</text><button  class='yybutton'  bindtap="default" hover-class="other-button-hover"> 预约 </button>
+                                        </view>                               
+                                    </view>
+                                    
+                                </block>
+                            </block>
+                        </view>
+                        <view  wx:else><text class='noresult'> {{tips}}</text></view>
                     </scroll-view>
                 </swiper-item>
-                 
+                    
             </swiper>
 
-        </swiper-item>  
-       
-        <swiper-item>  
-        <view>我是柠檬</view>  
-        </swiper-item>  
-       
-        <swiper-item>  
-        <view>那我是谁？</view>  
-        </swiper-item>  
+            </swiper-item>  
         
-        <swiper-item>  
-        <view>我怎么知道你是谁？</view>  
-        </swiper-item>  
+            <swiper-item>  
+            <view>我是柠檬</view>  
+            </swiper-item>  
+        
+            <swiper-item>  
+            <view>那我是谁？</view>  
+            </swiper-item>  
+            
+            <swiper-item>  
+            <view>我怎么知道你是谁？</view>  
+            </swiper-item>  
     </swiper>  
 </view>

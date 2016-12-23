@@ -4,7 +4,8 @@ var app = getApp()
 Page({
   data: {
     motto: 'Hello World',
-    userInfo: {}
+    userInfo: {},
+    result: ''
   },
   //事件处理函数
   bindViewTap: function() {
@@ -21,6 +22,23 @@ Page({
       that.setData({
         userInfo:userInfo
       })
+    })
+  },
+  scanoQR: function () {
+    var self = this
+    wx.scanCode({
+      success: function(res){
+        console.log(res);
+        self.setData({
+          result:JSON.stringify(res)
+        })
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
     })
   }
 })

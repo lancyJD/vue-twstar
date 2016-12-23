@@ -1,4 +1,9 @@
 /**index.wxss**/
+
+.container{
+  background-color: #fff;
+
+}
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -41,4 +46,11 @@
   float: left;
   bottom: 0;
   font-size: 14px;
+}
+picker{
+  height: 100rpx;
+  width: 100rpx;
+}
+.result{
+  width: 100%;
 }

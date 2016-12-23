@@ -8,44 +8,7 @@ Page( {
     winHeight: 0,  
     currentTab: 0, 
     dataIndex: null, 
-    //日期
-    dateTime: [
-      {
-        'dateTime':'12.01',
-        'week': '周一',
-        'isSelected': true
-      },
-      {
-        'dateTime':'12.02',
-        'week': '周二',
-        'isSelected': false
-      },
-      {
-        'dateTime':'12.03',
-        'week': '周三',
-        'isSelected': false
-      },
-      {
-        'dateTime':'12.04',
-        'week': '周四',
-        'isSelected': false
-      },
-      {
-        'dateTime':'12.05',
-        'week': '周五',
-        'isSelected': false
-      },
-      {
-        'dateTime':'12.06',
-        'week': '周六',
-        'isSelected': false
-      },
-      {
-        'dateTime':'12.07',
-        'week': '周天',
-        'isSelected': false
-      }
-    ],
+    tips:'Oops！当前暂无课程~',
     storeJson: {
       "data": {
         "course_tip": "",
@@ -219,29 +182,25 @@ Page( {
       "logined": false,
       "ret": 0
     },
+    witchSelect:[],
     currentSubTab: 0,
-    textTemp: '测试'
+    textTemp: '测试',
+    winWidth:0,
+    winHeight:0
   },  
   onLoad: function() {  
     var that = this;  
-    // 获取系统信息 
+    // // 获取系统信息 
     wx.getSystemInfo( {  
       success: function( res ) {  
         that.setData( {  
           winWidth: res.windowWidth,  
-          winHeight: res.windowHeight  
+          winHeight: res.windowHeight,
         });  
       }  
     }); 
-    wx.getLocation({
-      type: 'wgs84',
-      success: function(res) {
-        var latitude = res.latitude
-        var longitude = res.longitude
-        var speed = res.speed
-        var accuracy = res.accuracy
-      }
-    });
+    
+    this.switchWeek();
     
   },  
   openTheMap: function() {
@@ -281,22 +240,24 @@ Page( {
   },
   switchWeek: function(e) {
     var self = this; 
-    let dataIndex = e.currentTarget.dataset.index;
-    let dateTiemTemp = self.data.dateTime;
+    let dataIndex = e ? e.currentTarget.dataset.index: 0;
+    let dateTiemTemp = self.data.storeJson.data.day_week_list;
     let str = '测试'
     for(let i = 0; i < dateTiemTemp.length; i++) {
         if(i == dataIndex) {
            dateTiemTemp[i].isSelected = true;
-            str = str + dateTiemTemp[i].week
         } else {
           dateTiemTemp[i].isSelected = false;
         }
-      
     }
+    self.data.storeJson.data.day_week_list = dateTiemTemp
+    console.log(self.data.storeJson)
     self.setData({
       textTemp: str,
       currentSubTab: dataIndex,
-      dateTime: dateTiemTemp
+      storeJson: self.data.storeJson,
+      witchSelect: dateTiemTemp[dataIndex]
     })
+    
   } 
 }) 
